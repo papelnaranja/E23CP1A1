@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <input type="text" name="calculator" value="">
+    <br>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('1')">1</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('2')">2</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('3')">3</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('4')">4</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('5')">5</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('6')">6</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('7')">7</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('8')">8</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('9')">9</button>
+
+    <br>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('+')">+</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('-')">-</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('*')">*</button>
+    <button class="btn" type="button" name="button" onclick="addBtnValueToInput('%')">%</button>
+    <br>
+    <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+    <script type="text/javascript">
+
+    function addBtnValueToInput(elem) {
+        btn = elem;
+        inputVal = document.getElementsByName('calculator')[0];
+        inputVal.value = inputVal.value + elem;
+    }
+
+
+    var result = document.getElementsByName("result")[0];
+    var calculator = document.getElementsByName("calculator")[0];
+    var calcTotal = function () {
+        calculator.value = eval(calculator.value);
+        console.log(calculator.value);
+    };
+
+    </script>
+</body>
+
+</html>
